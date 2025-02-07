@@ -99,7 +99,7 @@ class HelpView extends View {
             const encodeSubject = encodeURIComponent(subject);
             const encodeBody = encodeURIComponent(body);
 
-            window.location.href = `mailto:help@jsteam.fr?subject=${encodeSubject}&body=${encodeBody}`;
+            window.location.href = `mailto:ddcorp2024@gmail.com?subject=${encodeSubject}&body=${encodeBody}`;
 
             alert("Merci pour votre message. Nous vous remercions de votre contribution.");
             this.helpForm.reset();
