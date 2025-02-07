@@ -198,8 +198,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Définition des routes
     Router.routes = [
-        { path: '/gameList', view: gameListView, title: 'Jeu' },
-        { path: '/', view: gameListView, title: 'Jeu' },
+        //{ path: '/gameList', view: gameListView, title: 'Jeu' },
+        //{ path: '/', view: gameListView, title: 'Jeu' },
         { path: '/about', view: aboutView, title: 'À propos' },
         { path: '/help', view: helpView, title: 'Support' }
     ];
