@@ -1,0 +1,29 @@
+.about {
+	max-width: 800px;
+	margin: 0 auto;
+	font-family: Arial, sans-serif;
+	overflow: hidden;
+  }
+  
+  .aboutText {
+	font-size: 1rem;
+	line-height: 1.6;
+	text-align: justify; /* Justifie le texte */
+  }
+  
+  .aboutImage {
+	float: right;
+	margin-left: 20px;
+	margin-bottom: 20px; 
+	width: 40%;
+	height: auto; 
+  }
+  
+  .additionalText {
+	clear: both;
+	font-size: 1rem;
+	line-height: 1.6;
+	margin-top: 20px;
+	text-align: justify;
+  }
+  

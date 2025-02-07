@@ -1,0 +1,90 @@
+.viewContent > .help {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.helpForm {
+	background: #181a21;
+    padding: 50px;
+	margin: 20px;
+	margin-bottom: 50px;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	--slide-from: -50px;
+	animation: slideDown .4s ease, fadeIn 1.8s cubic-bezier(0.19, 1, 0.22, 1);
+}
+.button, .helpForm button[type="submit"] {
+	align-self: center;
+	margin-top: 30px;
+	border: 1px solid #181a21;
+	border-radius: 3px;
+	padding: 12px 80px;
+	font-size: 18px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: all .15s cubic-bezier(0.19, 1, 0.22, 1);
+	transition: all .3s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+	background-image: linear-gradient(90deg, #06BFFF 50%, #2D73FF 90%);
+	background-size: 200%;
+	background-position: 99% 0;
+	color: white;
+}
+.button:hover, .helpForm button[type="submit"]:hover {
+	/* background-image: linear-gradient(90deg, #06BFFF 30%, #2D73FF 100%); */
+	background-position: 35%;
+	background-position: 0 0;
+	border-color: #06BFFF;
+}
+.helpForm label,
+.helpForm button[type="submit"] {
+	animation: slide .3s cubic-bezier(0.19, 1, 0.22, 1), fadeIn .4s ease;
+	animation-fill-mode: both;
+	animation-delay: .1s;
+}
+.helpForm label:last-of-type {
+	animation-delay: .2s;
+}
+.helpForm button[type="submit"] {
+	animation-delay: .3s;
+}
+.helpForm label {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	font-size: 13px;
+	text-transform: uppercase;
+	gap: 4px;
+}
+.helpForm label:not(:first-of-type) {
+	margin-top: 30px;
+}
+.helpForm input,
+.helpForm textarea {
+	border: 1px solid #32353c;
+	border-radius: 2px;
+	background-color: #32353c;
+	padding: 10px 15px;
+	font-size: 14px;
+	margin-top: 5px;
+	color: white;
+	font-family: 'Motiva Sans';
+}
+
+@media (min-width: 700px) {
+	.helpForm {
+		width: 70%;
+		/* margin-bottom: 150px; */
+	}
+	.helpForm button[type="submit"] {
+		align-self: flex-end;
+	}
+	.helpForm label {
+		/* width: 60%; */
+	}
+}
+input::placeholder {
+	font-weight: lighter !important;
+	font-style: italic;
+	color: #aaa;
+}

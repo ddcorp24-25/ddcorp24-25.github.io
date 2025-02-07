@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<title>JSTEAM</title>
+
+	<link rel="icon" href="images/favicon.png" sizes="96x96">
+
+	<link rel="stylesheet" type="text/css" href="css/fonts.css" />
+	<link rel="stylesheet" type="text/css" href="css/animations.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.css" />
+	<link rel="stylesheet" type="text/css" href="css/header.css" />
+	<link rel="stylesheet" type="text/css" href="css/footer.css" />
+	<link rel="stylesheet" type="text/css" href="css/gameList.css" />
+	<link rel="stylesheet" type="text/css" href="css/help.css" />
+	<link rel="stylesheet" type="text/css" href="css/about.css" />
+	<link rel="stylesheet" type="text/css" href="css/gameDetail.css" />
+
+	<script src="src/main.js"></script>
+
+</head>
+<body>
+	<header>
+		<nav>
+			<a href="/" class="logo">
+				<img src="images/logo.svg" />
+				<span><em>hy</em>drash</span>
+			</a>
+			<ul class="mainMenu">
+				<li><a href="/about" class="aboutLink">À propos</a></li>
+				<li><a href="/gameList" class="gameListLink">Jeu</a></li>
+				<li><a href="/help" class="helpLink">Support</a></li>
+			</ul>
+		</nav>
+	</header>
+	<section class="viewContainer">
+		<header class="viewTitle"></header>
+		<div class="viewContent activeOnly">
+			<article class="gameList active">
+				<header class="searchBar">
+					<button class="toggleSearchButton">Rechercher</button>
+					<form class="searchForm" style="display: none;">
+						<input type="text" name="search" placeholder="Nom du jeu"/>
+						<select name="ordering">
+							<option value="">Tri par pertinence</option>
+							<option value="-metacritic">Tri par note</option>
+							<option value="-released">Tri par date de sortie</option>
+						</select>
+						<button type="submit">Filtrer</button>
+					</form>
+				</header>
+				<section class="results"></section>
+			</article>
+			<article class="gameDetail">Contenu de la vue "Détail"</article>
+			<article class="about">
+				<p class="aboutText">
+					<img src="images/screen.png" alt="Image" class="aboutImage">
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa, id voluptatibus! Corrupti quaerat quo tempore voluptatum iure, veniam quos delectus, placeat magnam recusandae repellendus minus, tenetur necessitatibus!
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, quod! Ipsam perspiciatis, voluptatum voluptatibus, atque quidem necessitatibus voluptas, commodi cumque recusandae, molestias consequuntur quod.
+					Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facilis voluptatibus quae sed, nobis, cupiditate consequuntur, reprehenderit veniam ad neque. Quo, veniam?
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat, in! Voluptatibus quo odit doloribus! Accusamus doloremque officiis eaque in provident, voluptatem incidunt sapiente blanditiis temporibus ad quaerat, accusantium quidem molestias.
+				</p>
+				
+				<p class="additionalText">
+				  Voici un autre paragraphe en dessous de l'image. Le texte ici peut être n'importe quoi, selon ce que tu veux ajouter. Ce paragraphe est séparé du reste du contenu par l'image flottante à droite.
+				  Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolorem nisi eaque distinctio, magnam nemo, eum fuga sunt porro voluptate nobis veritatis fugit corrupti facere voluptatum? Accusantium voluptates officia eaque.
+				</p>
+				<p class="additionalText">
+					Voici un autre paragraphe en dessous de l'image. Le texte ici peut être n'importe quoi, selon ce que tu veux ajouter. Ce paragraphe est séparé du reste du contenu par l'image flottante à droite.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolorem nisi eaque distinctio, magnam nemo, eum fuga sunt porro voluptate nobis veritatis fugit corrupti facere voluptatum? Accusantium voluptates officia eaque.
+				</p>
+				<p class="additionalText">
+					Voici un autre paragraphe en dessous de l'image. Le texte ici peut être n'importe quoi, selon ce que tu veux ajouter. Ce paragraphe est séparé du reste du contenu par l'image flottante à droite.
+					Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos dolorem nisi eaque distinctio, magnam nemo, eum fuga sunt porro voluptate nobis veritatis fugit corrupti facere voluptatum? Accusantium voluptates officia eaque.
+				</p>
+			</article>			  
+			<article class="help">
+				<form class="helpForm">
+					<label>
+						Sujet
+						<input type="text" name="subject" />
+					</label>
+					<label>
+						Votre message
+						<textarea name="body" rows="5"></textarea>
+					</label>
+					<button type="submit">Envoyer</button>
+				</form>				
+			</article>
+
+		</div>
+	</section>
+	<footer>
+		<div>
+			Une (incroyable) création originale de <a href="http://uidlt.fr">Thomas Fritsch et Cypcraft</a> pour la <a href="https://iut.univ-lille.fr/">DDCorp</a> de <a href="https://www.univ-lille.fr/">Gustave Eiffel</a>
+			<img src="images/logo-iut.png" />
+		</div>
+		<div>Données et images des jeux fournies par <a href="https://rawg.io/apidocs" title="Rawg API">rawg.io</a></div>
+	</footer>
+</body>
+</html>

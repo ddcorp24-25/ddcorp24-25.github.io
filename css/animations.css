@@ -1,0 +1,33 @@
+@keyframes fadeIn{
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+@keyframes slide {
+	from { transform: translateX(-30px); }
+}
+@keyframes slideUp{
+	from { transform: translateY(20px); }
+	to { transform: translateY(0); }
+}
+@keyframes slideDown{
+	from { transform: translateY(var(--slide-from, -20px)); }
+	to { transform: translateY(0); }
+}
+@keyframes slideBg {
+	to { background-position: -200% center; }
+}
+@keyframes zoomOut{
+	from { transform: scale(.7); }
+	to { transform: scale(1); }
+}
+@keyframes burn {
+	to { transform: translateX(3px) skew(-13deg); }
+}
+@keyframes rotate {
+	0% {
+		transform: translate(-50%,-50%) rotate(0deg);
+	}
+	100% {
+		transform: translate(-50%,-50%) rotate(360deg);
+	}
+}

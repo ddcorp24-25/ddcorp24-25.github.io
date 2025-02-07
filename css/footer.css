@@ -1,0 +1,38 @@
+body > footer {
+	background-color: #171a21aa;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 40px;
+	color: #8F98A0;
+	font-size: 12px;
+}
+body > footer a {
+	text-decoration: none;
+	color: #C6D4DF;
+	position: relative;
+}
+body > footer a.mouseover:before {
+	content: attr(href);
+	position: absolute;
+	z-index: 1;
+	top: 110%;
+	right: 0;
+	padding: 3px 8px;
+	border-radius: 3px;
+	background-color: #1b2838;
+	font-size: 80%;
+	white-space: nowrap;
+	color:#67c1f5;
+	animation: fadeIn .2s ease, slideDown .1s ease;
+}
+body > footer > div {
+	width: 100%;
+	max-width: 1000px;
+	border-top: 1px solid #363c44;
+	padding: 20px 0;
+}
+body > footer img[src="images/logo-iut.png"] {
+	width: 100px;
+	display: block;
+}
