@@ -184,9 +184,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const helpElement = document.querySelector('.help');
     const gameListElement = document.querySelector('.gameList');
     const aboutElement = document.querySelector('.about');
+    const teamElement = document.querySelector('.team');
 
     // Vérification si les éléments existent pour éviter d'autres erreurs
-    if (!helpElement || !gameListElement || !aboutElement) {
+    if (!helpElement || !gameListElement || !aboutElement || !teamElement) {
         console.error("Un des éléments HTML requis est introuvable !");
         return;
     }
@@ -195,12 +196,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const helpView = new HelpView(helpElement);
     const gameListView = new GameListView(gameListElement);
     const aboutView = new View(aboutElement);
+    const teamView = new View(teamElement);
 
     // Définition des routes
     Router.routes = [
-        //{ path: '/gameList', view: gameListView, title: 'Jeu' },
-        //{ path: '/', view: gameListView, title: 'Jeu' },
+        { path: '/gameList', view: gameListView, title: 'Jeu' },
+        { path: '/', view: gameListView, title: 'Jeu' },
         { path: '/about', view: aboutView, title: 'À propos' },
+        { path: '/team', view: teamView, title: 'L\'Equipe' },
         { path: '/help', view: helpView, title: 'Support' }
     ];
 
