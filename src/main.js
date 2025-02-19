@@ -64,7 +64,7 @@ class Router {
 }
 
 // Fonction pour générer un élément de jeu
-const renderGameThumbnail = ({ background_image, name, released, metacritic }) => {
+const renderGameThumbnail = ({ background_image, name, released }) => {
     return `
     <a href="${background_image}">
         <img src="${background_image}"/>
@@ -72,7 +72,6 @@ const renderGameThumbnail = ({ background_image, name, released, metacritic }) =
             <h3>${name}</h3>
             <div class="infos">
                 <time datetime="${released}">${new Date(released).toLocaleDateString()}</time>
-                <span class="metacritic">${metacritic}</span>
             </div>
         </footer>
     </a>`;
@@ -144,9 +143,7 @@ class GameListView extends View {
             game.name.toLowerCase().includes(searchValue) || searchValue === ''
         );
 
-        if (filterValue === '-metacritic') {
-            filteredData.sort((a, b) => b.metacritic - a.metacritic);
-        } else if (filterValue === '-released') {
+        if (filterValue === '-released') {
             filteredData.sort((a, b) => new Date(b.released) - new Date(a.released));
         } else {
             filteredData.sort((a, b) => a.name.localeCompare(b.name));
@@ -161,19 +158,16 @@ const data = [
     {
         name: 'Mario Kart 8 Deluxe',
         released: '2017-04-27',
-        metacritic: 92,
         background_image: 'images/mario-kart-8-deluxe.jpg'
     },
     {
         name: 'God of War Ragnarok',
         released: '2022-11-09',
-        metacritic: 94,
         background_image: 'images/god-of-war-ragnarok.jpg'
     },
     {
         name: 'The Last of Us Part 2',
         released: '2020-06-19',
-        metacritic: 94,
         background_image: 'images/the-last-of-us-part-2.jpg'
     }
 ];
