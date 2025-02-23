@@ -156,19 +156,49 @@ class GameListView extends View {
 // ======== Données des jeux ========
 const data = [
     {
-        name: 'Mario Kart 8 Deluxe',
-        released: '2017-04-27',
-        background_image: 'images/mario-kart-8-deluxe.jpg'
+        name: 'Zone de recherche de la base',
+        released: '2025-10-01',
+        background_image: 'images/screen/1.png'
     },
     {
-        name: 'God of War Ragnarok',
-        released: '2022-11-09',
-        background_image: 'images/god-of-war-ragnarok.jpg'
+        name: 'Information base',
+        released: '2025-03-19',
+        background_image: 'images/screen/2.png'
     },
     {
-        name: 'The Last of Us Part 2',
-        released: '2020-06-19',
-        background_image: 'images/the-last-of-us-part-2.jpg'
+        name: 'Vue de la base',
+        released: '2025-11-23',
+        background_image: 'images/screen/3.png'
+    },
+    {
+        name: 'Les objectifs',
+        released: '2025-02-20',
+        background_image: 'images/screen/4.png'
+    },
+    {
+        name: 'Découverte des poissons',
+        released: '2025-11-17',
+        background_image: 'images/screen/5.png'
+    },
+    {
+        name: 'Plantation',
+        released: '2025-11-04',
+        background_image: 'images/screen/6.png'
+    },
+    {
+        name: 'Base de l’extérieur',
+        released: '2025-09-06',
+        background_image: 'images/screen/7.png'
+    },
+    {
+        name: 'Les fonds marins',
+        released: '2025-07-03',
+        background_image: 'images/screen/8.png'
+    },
+    {
+        name: 'Grotte sous-marine',
+        released: '2025-09-27',
+        background_image: 'images/screen/9.png'
     }
 ];
 
