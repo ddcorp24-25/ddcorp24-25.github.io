@@ -153,6 +153,34 @@ class GameListView extends View {
     }
 }
 
+// FIREBASE
+const firebaseConfig = {
+    apiKey: "AIzaSyDYXhIt0KzqyVrn2PWDnnCsuXtHuM4cRWU",
+    authDomain: "test-772d5.firebaseapp.com",
+    projectId: "test-772d5",
+    storageBucket: "test-772d5.appspot.com",
+    messagingSenderId: "700771285719",
+    appId: "1:700771285719:web:8e38ec2450931fe852ce92",
+    measurementId: "G-49M4E9E35K",
+    databaseURL: "https://hydrash-default-rtdb.europe-west1.firebasedatabase.app"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+
+function UpdateView() {
+    let viewNb;
+    firebase.database().ref("stats/view").once("value", (snapshot) => {
+        viewNb = snapshot.val() + 1;
+
+        firebase.database().ref("/stats").update({
+            view: viewNb
+        });
+    });
+}
+
+
+
 // ======== Données des jeux ========
 const data = [
     {
@@ -248,4 +276,6 @@ document.addEventListener("DOMContentLoaded", function () {
             Router.navigate(event.currentTarget.getAttribute('href'));
         });
     });
+
+    UpdateView();
 });
