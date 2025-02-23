@@ -172,10 +172,10 @@ function UpdateView() {
     let viewNb;
     firebase.database().ref("stats/view").once("value", (snapshot) => {
         viewNb = snapshot.val() + 1;
-
         firebase.database().ref("/stats").update({
             view: viewNb
         });
+        document.querySelector(".viewClass").innerHTML =  `Nombre de vues : ${viewNb}`;
     });
 }
 
