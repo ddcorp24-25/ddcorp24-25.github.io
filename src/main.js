@@ -168,37 +168,37 @@ const data = [
     {
         name: 'Vue de la base',
         released: '2025-11-23',
-        background_image: 'images/screen/3.png'
+        background_image: 'images/screen/6.png'
     },
     {
         name: 'Les objectifs',
         released: '2025-02-20',
-        background_image: 'images/screen/4.png'
+        background_image: 'images/screen/9.png'
     },
     {
         name: 'Découverte des poissons',
         released: '2025-11-17',
-        background_image: 'images/screen/5.png'
+        background_image: 'images/screen/10.png'
     },
     {
         name: 'Plantation',
         released: '2025-11-04',
-        background_image: 'images/screen/6.png'
+        background_image: 'images/screen/13.png'
     },
     {
         name: 'Base de l’extérieur',
         released: '2025-09-06',
-        background_image: 'images/screen/7.png'
+        background_image: 'images/screen/15.png'
     },
     {
         name: 'Les fonds marins',
         released: '2025-07-03',
-        background_image: 'images/screen/8.png'
+        background_image: 'images/screen/17.png'
     },
     {
         name: 'Grotte sous-marine',
         released: '2025-09-27',
-        background_image: 'images/screen/9.png'
+        background_image: 'images/screen/20.png'
     }
 ];
 
@@ -224,8 +224,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Définition des routes
     Router.routes = [
-        { path: '/gameList', view: gameListView, title: 'Jeu' },
-        { path: '/', view: gameListView, title: 'Jeu' },
+        { path: '/gameList', view: gameListView, title: 'JEU/APP' },
+        { path: '/', view: gameListView, title: 'JEU/APP' },
+        { path: '/install', view: helpView, title: 'Installation' },
         { path: '/about', view: aboutView, title: 'À propos' },
         { path: '/team', view: teamView, title: 'L\'Equipe' },
         { path: '/help', view: helpView, title: 'Support' }
