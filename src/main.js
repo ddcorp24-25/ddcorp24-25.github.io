@@ -178,6 +178,27 @@ function UpdateView() {
         document.querySelector(".viewClass").innerHTML =  `Nombre de vues : ${viewNb}`;
     });
 }
+document.querySelector(".viewClass").addEventListener("click", resetView);
+function resetView(){
+    let pwd = 'DDforEVER';
+    let person = prompt("Please enter your password:", "***");
+    if (person == null || person == "") {
+      text = "User cancelled the prompt.";
+      alert(text);
+    } else {
+      if (person == pwd) {
+        firebase.database().ref("/stats").update({
+            view: 0
+        });
+        document.querySelector(".viewClass").innerHTML =  `Nombre de vues : 0`;
+      } else {
+        text = "Wrong password!";
+        alert(text);
+      }
+    }
+   // document.getElementById("demo").innerHTML = text;
+  }
+
 
 
 
