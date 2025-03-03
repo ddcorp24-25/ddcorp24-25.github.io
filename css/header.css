@@ -5,7 +5,7 @@ body > header {
 	padding: 0 20px;
 	background-color: #171a21aa;
 	z-index: 10;
-	height: 104px;
+	height: 114px;
 	backdrop-filter: blur(4px);
 	display: flex;
 	justify-content: center;
