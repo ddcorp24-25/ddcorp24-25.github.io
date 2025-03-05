@@ -272,6 +272,7 @@ const data = [
     }
 ];
 
+
 // ======== Initialisation de l'application ========
 document.addEventListener("DOMContentLoaded", function () {
     // Sélection des éléments HTML pour les vues
