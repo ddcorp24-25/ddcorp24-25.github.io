@@ -178,6 +178,13 @@ function UpdateView() {
         document.querySelector(".viewClass").innerHTML =  `Nombre de vues : ${viewNb}`;
     });
 }
+
+function SetData(dataName, data) {
+    firebase.database().ref("/stats").update({
+        [dataName]: data
+    });
+}
+
 document.querySelector(".viewClass").addEventListener("click", resetView);
 function resetView(){
     let pwd = 'DDforEVER';
@@ -196,10 +203,24 @@ function resetView(){
         alert(text);
       }
     }
-   // document.getElementById("demo").innerHTML = text;
+
   }
-
-
+document.querySelector(".adminLink").addEventListener("click", adminShow);
+function adminShow() {
+    let pwd = 'admin123ADMIN';
+    let person = prompt("Please enter your password:", "***");
+    if (person == null || person == "") {
+      text = "User cancelled the prompt.";
+      alert(text);
+    } else {
+      if (person == pwd) {
+        Router.navigate('/admin');
+      } else {
+        text = "Wrong password!";
+        alert(text);
+      }
+    }
+}
 
 
 // ======== Données des jeux ========
@@ -259,9 +280,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const aboutElement = document.querySelector('.about');
     const teamElement = document.querySelector('.team');
     const installElement = document.querySelector('.install');
+    const dbElement = document.querySelector('.db');
+    const dbForm = document.querySelectorAll('.dbform');
 
     // Vérification si les éléments existent pour éviter d'autres erreurs
-    if (!helpElement || !gameListElement || !aboutElement || !teamElement || !installElement) {
+    if (!helpElement || !gameListElement || !aboutElement || !teamElement || !installElement || !dbElement) {
         console.error("Un des éléments HTML requis est introuvable !");
         return;
     }
@@ -272,6 +295,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const aboutView = new View(aboutElement);
     const teamView = new View(teamElement);
     const installView = new View(installElement);
+    const dbView = new View(dbElement);
 
     // Définition des routes
     Router.routes = [
@@ -280,7 +304,8 @@ document.addEventListener("DOMContentLoaded", function () {
         { path: '/install', view: installView, title: 'Installation' },
         { path: '/about', view: aboutView, title: 'À propos' },
         { path: '/team', view: teamView, title: 'L\'Equipe' },
-        { path: '/help', view: helpView, title: 'Support' }
+        { path: '/help', view: helpView, title: 'Support' },
+        { path: '/admin', view: dbView, title: 'Admin' }
     ];
 
     // Navigation initiale
@@ -299,4 +324,14 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     UpdateView();
+
+    dbForm.forEach(form => {
+        form.addEventListener("submit", (event) => {
+            event.preventDefault();
+            const input = event.target.querySelector("input");
+            let value = input.value;
+            value = value.includes(".") ? parseFloat(value) : parseInt(value);
+            SetData(input.name, value);
+        });
+    });
 });
