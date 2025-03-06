@@ -227,50 +227,71 @@ function adminShow() {
 const data = [
     {
         name: 'Zone de recherche de la base',
-        released: '2025-10-01',
+        released: '2025-01-15',
         background_image: 'images/screen/1.png'
     },
     {
         name: 'Information base',
-        released: '2025-03-19',
+        released: '2025-02-10',
         background_image: 'images/screen/2.png'
     },
     {
         name: 'Vue de la base',
-        released: '2025-11-23',
+        released: '2025-02-25',
         background_image: 'images/screen/6.png'
     },
     {
         name: 'Les objectifs',
-        released: '2025-02-20',
+        released: '2025-01-05',
         background_image: 'images/screen/9.png'
     },
     {
         name: 'Découverte des poissons',
-        released: '2025-11-17',
+        released: '2025-01-20',
         background_image: 'images/screen/10.png'
     },
     {
         name: 'Plantation',
-        released: '2025-11-04',
+        released: '2025-02-18',
         background_image: 'images/screen/13.png'
     },
     {
         name: 'Base de l’extérieur',
-        released: '2025-09-06',
+        released: '2025-01-30',
         background_image: 'images/screen/15.png'
     },
     {
         name: 'Les fonds marins',
-        released: '2025-07-03',
+        released: '2024-12-10',
         background_image: 'images/screen/17.png'
     },
     {
         name: 'Grotte sous-marine',
-        released: '2025-09-27',
+        released: '2024-12-25',
         background_image: 'images/screen/20.png'
+    },
+    {
+        name: 'Page 4',
+        released: '2025-03-04',
+        background_image: 'images/screen/app1.jpg'
+    },
+    {
+        name: 'Page 3',
+        released: '2025-03-04',
+        background_image: 'images/screen/app2.jpg'
+    },
+    {
+        name: 'Page 1',
+        released: '2025-03-04',
+        background_image: 'images/screen/app3.jpg'
+    },
+    {
+        name: 'Page 2',
+        released: '2025-03-04',
+        background_image: 'images/screen/app4.jpg'
     }
 ];
+
 
 
 // ======== Initialisation de l'application ========
