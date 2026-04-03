@@ -301,12 +301,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const gameListElement = document.querySelector('.gameList');
     const aboutElement = document.querySelector('.about');
     const teamElement = document.querySelector('.team');
-    const installElement = document.querySelector('.install');
     const dbElement = document.querySelector('.db');
     const dbForm = document.querySelectorAll('.dbform');
 
     // Vérification si les éléments existent pour éviter d'autres erreurs
-    if (!helpElement || !gameListElement || !aboutElement || !teamElement || !installElement || !dbElement) {
+    if (!helpElement || !gameListElement || !aboutElement || !teamElement || !dbElement) {
         console.error("Un des éléments HTML requis est introuvable !");
         return;
     }
@@ -316,14 +315,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const gameListView = new GameListView(gameListElement);
     const aboutView = new View(aboutElement);
     const teamView = new View(teamElement);
-    const installView = new View(installElement);
     const dbView = new View(dbElement);
 
     // Définition des routes
     Router.routes = [
         { path: '/gameList', view: gameListView, title: 'JEU/APP' },
         { path: '/', view: gameListView, title: 'JEU/APP' },
-        { path: '/install', view: installView, title: 'Installation' },
         { path: '/about', view: aboutView, title: 'À propos' },
         { path: '/team', view: teamView, title: 'L\'Equipe' },
         { path: '/help', view: helpView, title: 'Support' },
