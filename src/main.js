@@ -317,7 +317,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Définition des routes
     Router.routes = [
-        { path: '/', view: gameListView, title: 'JEU/APP' },
         { path: '/about', view: aboutView, title: 'À propos' },
         { path: '/team', view: teamView, title: 'L\'Equipe' },
         { path: '/help', view: helpView, title: 'Support' },
