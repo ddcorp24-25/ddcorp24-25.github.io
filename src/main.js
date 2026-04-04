@@ -326,10 +326,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // Navigation initiale
     Router.navigate('/about');
 
-    // Tri des données et affichage de la liste des jeux
-    data.sort((a, b) => a.name.localeCompare(b.name));
-    gameListView.renderGameList(data);
-
     // Gestion des clics sur les liens du menu
     document.querySelectorAll('body > header ul.mainMenu li > a').forEach(link => {
         link.addEventListener('click', (event) => {
