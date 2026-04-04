@@ -298,28 +298,25 @@ const data = [
 document.addEventListener("DOMContentLoaded", function () {
     // Sélection des éléments HTML pour les vues
     const helpElement = document.querySelector('.help');
-    const gameListElement = document.querySelector('.gameList');
     const aboutElement = document.querySelector('.about');
     const teamElement = document.querySelector('.team');
     const dbElement = document.querySelector('.db');
     const dbForm = document.querySelectorAll('.dbform');
 
     // Vérification si les éléments existent pour éviter d'autres erreurs
-    if (!helpElement || !gameListElement || !aboutElement || !teamElement || !dbElement) {
+    if (!helpElement || !aboutElement || !teamElement || !dbElement) {
         console.error("Un des éléments HTML requis est introuvable !");
         return;
     }
 
     // Création des instances des vues
     const helpView = new HelpView(helpElement);
-    const gameListView = new GameListView(gameListElement);
     const aboutView = new View(aboutElement);
     const teamView = new View(teamElement);
     const dbView = new View(dbElement);
 
     // Définition des routes
     Router.routes = [
-        { path: '/gameList', view: gameListView, title: 'JEU/APP' },
         { path: '/', view: gameListView, title: 'JEU/APP' },
         { path: '/about', view: aboutView, title: 'À propos' },
         { path: '/team', view: teamView, title: 'L\'Equipe' },
