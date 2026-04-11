@@ -1,12 +1,14 @@
 * {
     box-sizing: border-box;
 }
+
 html,
 body {
 margin: 0;
 /* height: 100%; */
 padding: 0;
 }
+
 body {
 min-height: 100vh;
 background: rgb(210, 195, 170);
@@ -18,6 +20,7 @@ display: flex;
 flex-direction: column;
 padding-top: 104px;
 }
+
 .viewContainer{
 flex: 1;
 display: flex;
@@ -29,36 +32,45 @@ background-size: 100% 500px;
 background-position: -200px -250px;
 padding: 0 40px 100px;
 }
+
 .viewContainer .viewTitle,
 .viewContainer .viewContent {
 width: 100%;
 max-width: 1100px;
 }
+
 .viewContainer .viewContent.activeOnly > article:not(.active) {
 display: none;
 }
+
 h1, h2, h3, h4 {
 font-weight: bold;
 color: #f5f0e8;
 }
+
 h1 {
 font-size: 48px;
 margin-bottom: 10px;
 text-transform: uppercase;
 }
+
 h2 {
 font-size: 26px;
 }
+
 h3 {
 font-size: 20px;
 font-weight: normal;
 }
+
 a {
 color: #c9a870;
 }
+
 a:hover {
 color: #f5f0e8;
 }
+
 /* body > footer {
     background: #161616;
     border-top: 1px solid #000;
@@ -66,18 +78,22 @@ color: #f5f0e8;
     padding: 50px;
     color: #fff8;
 } */
+
 .viewContainer {
 display: flex;
 flex-direction: column;
 position: relative;
 }
+
 .is-loading {
 position:relative;
 min-height: 600px;
 }
+
 .is-loading > * {
 display: none !important;
 }
+ 
 .is-loading:before {
 content: '';
 position: absolute;
@@ -87,6 +103,7 @@ right:0;
 bottom:0;
 z-index: 1;
 }
+
 .is-loading:after {
 content: '  ';
 position: absolute;
@@ -101,6 +118,7 @@ border-radius: 50%;
 animation: rotate .5s linear infinite;
 transform-origin: center;
 }
+
 .popup {
 position: fixed;
 top: 0;
@@ -116,6 +134,7 @@ z-index: 100;
 cursor: pointer;
 animation: slideUp .4s cubic-bezier(0.165, 0.84, 0.44, 1), fadeIn .4s cubic-bezier(0.19, 1, 0.22, 1);
 }
+
 /* .popup > * {
 	background: #eee;
 	color: #333;
@@ -124,11 +143,13 @@ animation: slideUp .4s cubic-bezier(0.165, 0.84, 0.44, 1), fadeIn .4s cubic-bezi
 	margin: 0;
 	padding: 10px 30px;
 }
+
 .popup > *:first-child {
 	padding-top: 25px;
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
 }
+
 .popup > *:last-child {
 	padding-bottom: 25px;
 	border-bottom-left-radius: 3px;
