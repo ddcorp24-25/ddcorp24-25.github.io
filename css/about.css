@@ -28,6 +28,7 @@
   }
   
   .logoTeam {
+      float: left;
       height: 20%;
       width: auto;
   }
