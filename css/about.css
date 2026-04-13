@@ -27,7 +27,9 @@
 	text-align: justify;
   }
 
-.logoUMR {
-      width = 40%;
-      height = auto;
-  }
+.logos {
+	display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
