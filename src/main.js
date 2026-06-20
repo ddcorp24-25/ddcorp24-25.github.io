@@ -1,6 +1,6 @@
-// ======== Définition des Classes ========
+// ======== Class Definitions ========
 
-// Classe View : Gère l'affichage des vues
+// View class: Handles displaying views
 class View {
     constructor(element) {
         this.element = element;
@@ -15,7 +15,7 @@ class View {
     }
 }
 
-// Classe Router : Gère la navigation entre les vues
+// Router class: Handles navigation between views
 class Router {
     static routes = [];
 
@@ -29,12 +29,12 @@ class Router {
             if (route.view) {
                 route.view.show();
             } else {
-                console.error('Vue pour le chemin ' + path + ' est undefined');
+                console.error('View for path ' + path + ' is undefined');
             }
 
             Router.updateTitle(route.title);
         } else {
-            console.error('Route non trouvée pour le chemin : ' + path);
+            console.error('Route not found for path: ' + path);
         }
     }
 
@@ -63,7 +63,7 @@ class Router {
     }
 }
 
-// Fonction pour générer un élément de jeu
+// Function to generate a game element
 const renderGameThumbnail = ({ background_image, name, released }) => {
     return `
     <a href="${background_image}">
@@ -77,7 +77,7 @@ const renderGameThumbnail = ({ background_image, name, released }) => {
     </a>`;
 };
 
-// Classe HelpView : Gère la soumission du formulaire d'aide
+// HelpView class: Handles the help form submission
 class HelpView extends View {
     constructor(element) {
         super(element);
@@ -92,7 +92,7 @@ class HelpView extends View {
         const body = this.helpForm.querySelector('textarea[name=body]').value;
 
         if (subject === "" || body === "") {
-            alert("Tous les champs doivent être remplis");
+            alert("All fields must be filled in");
             return false;
         } else {
             const encodeSubject = encodeURIComponent(subject);
@@ -100,14 +100,14 @@ class HelpView extends View {
 
             window.location.href = `mailto:ddcorp2024@gmail.com?subject=${encodeSubject}&body=${encodeBody}`;
 
-            alert("Merci pour votre message. Nous vous remercions de votre contribution.");
+            alert("Thank you for your message. We appreciate your contribution.");
             this.helpForm.reset();
             return true;
         }
     }
 }
 
-// Classe GameListView : Affiche la liste des jeux et gère la recherche
+// GameListView class: Displays the game list and handles search
 class GameListView extends View {
     constructor(element) {
         super(element);
@@ -175,7 +175,7 @@ function UpdateView() {
         firebase.database().ref("/stats").update({
             view: viewNb
         });
-        document.querySelector(".viewClass").innerHTML =  `Nombre de vues : ${viewNb}`;
+        document.querySelector(".viewClass").innerHTML =  `Number of views: ${viewNb}`;
     });
 }
 
@@ -197,7 +197,7 @@ function resetView(){
         firebase.database().ref("/stats").update({
             view: 0
         });
-        document.querySelector(".viewClass").innerHTML =  `Nombre de vues : 0`;
+        document.querySelector(".viewClass").innerHTML =  `Number of views: 0`;
       } else {
         text = "Wrong password!";
         alert(text);
@@ -223,7 +223,7 @@ function adminShow() {
 }
 
 
-// ======== Données des jeux ========
+// ======== Game Data ========
 const data = [
     {
         name: 'Zone de recherche de la base',
@@ -294,39 +294,50 @@ const data = [
 
 
 
-// ======== Initialisation de l'application ========
+// ======== App Initialization ========
 document.addEventListener("DOMContentLoaded", function () {
-    // Sélection des éléments HTML pour les vues
+    // Select HTML elements for the views
     const helpElement = document.querySelector('.help');
+    const gameListElement = document.querySelector('.gameList');
     const aboutElement = document.querySelector('.about');
     const teamElement = document.querySelector('.team');
+    const installElement = document.querySelector('.install');
     const dbElement = document.querySelector('.db');
     const dbForm = document.querySelectorAll('.dbform');
 
-    // Vérification si les éléments existent pour éviter d'autres erreurs
-    if (!helpElement || !aboutElement || !teamElement || !dbElement) {
-        console.error("Un des éléments HTML requis est introuvable !");
+    // Check that the elements exist to avoid further errors
+    if (!helpElement || !gameListElement || !aboutElement || !teamElement || !installElement || !dbElement) {
+        console.error("One of the required HTML elements could not be found!");
         return;
     }
 
-    // Création des instances des vues
+    // Create the view instances
     const helpView = new HelpView(helpElement);
+    const gameListView = new GameListView(gameListElement);
     const aboutView = new View(aboutElement);
     const teamView = new View(teamElement);
+    const installView = new View(installElement);
     const dbView = new View(dbElement);
 
-    // Définition des routes
+    // Route definitions
     Router.routes = [
-        { path: '/about', view: aboutView, title: 'À propos' },
-        { path: '/team', view: teamView, title: 'L\'Equipe' },
+        { path: '/gameList', view: gameListView, title: 'App/Mockup' },
+        { path: '/', view: gameListView, title: 'App/Mockup' },
+        { path: '/install', view: installView, title: 'Installation' },
+        { path: '/about', view: aboutView, title: 'About' },
+        { path: '/team', view: teamView, title: 'Team' },
         { path: '/help', view: helpView, title: 'Support' },
         { path: '/admin', view: dbView, title: 'Admin' }
     ];
 
-    // Navigation initiale
+    // Initial navigation
     Router.navigate('/about');
 
-    // Gestion des clics sur les liens du menu
+    // Sort data and display the game list
+    data.sort((a, b) => a.name.localeCompare(b.name));
+    gameListView.renderGameList(data);
+
+    // Handle clicks on the menu links
     document.querySelectorAll('body > header ul.mainMenu li > a').forEach(link => {
         link.addEventListener('click', (event) => {
             event.preventDefault();
