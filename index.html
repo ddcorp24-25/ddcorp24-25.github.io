@@ -28,8 +28,10 @@
 				<span><em>Vestige</em></span>
 			</a>
 			<ul class="mainMenu">
-				<li><a href="/about" class="aboutLink">À propos</a></li>
-				<li><a href="/team" class="teamLink">L'Equipe</a></li>
+				<li><a href="/about" class="aboutLink">About</a></li>
+				<li><a href="/team" class="teamLink">Team</a></li>
+				<li><a href="/gameList" class="gameListLink">App/Mockup</a></li>
+				<li><a href="/install" class="installLink">Installation</a></li>
 				<li><a href="/help" class="helpLink">Support</a></li>
 			</ul>
 		</nav>
@@ -39,256 +41,359 @@
 		<div class="viewContent activeOnly">
 			<article class="gameList active">
 				<header class="searchBar">
-					<button class="toggleSearchButton">Rechercher</button>
+					<button class="toggleSearchButton">Search</button>
 					<form class="searchForm" style="display: none;">
-						<input type="text" name="search" placeholder="Nom du jeu"/>
+						<input type="text" name="search" placeholder="Game name"/>
 						<select name="ordering">
-							<option value="">Tri par pertinence</option>
-							<option value="-released">Tri par date de sortie</option>
+							<option value="">Sort by relevance</option>
+							<option value="-released">Sort by release date</option>
 						</select>
-						<button type="submit">Filtrer</button>
+						<button type="submit">Filter</button>
 					</form>
 				</header>
 				<section class="results"></section>
 			</article>
 			<article class="team">
 				<p class="aboutText">
-					<strong>🚀 Équipe de Robotique DD CORP – FIRST LEGO League</strong>
+					<strong>🚀 DD CORP Robotics Team – FIRST LEGO League</strong>
 				</p>
 			
 				<p class="additionalText">
-					<strong>Qui sommes-nous ?</strong><br>
-					Nous sommes <strong>DD Corp</strong>, une équipe de robotique du <strong>Lycée Gustave Eiffel Armentières</strong>, passionnée par l'innovation et la technologie. Nous participons à la <strong>FIRST LEGO League (FLL)</strong>, une compétition où nous concevons et programmons des robots <strong>SPIKE Prime</strong> pour relever des défis passionnants !
+					<strong>Who are we?</strong><br>
+					We are <strong>DD Corp</strong>, a robotics team from <strong>Lycée Gustave Eiffel Armentières</strong>, passionate about innovation and technology. We take part in the <strong>FIRST LEGO League (FLL)</strong>, a competition where we design and program <strong>SPIKE Prime</strong> robots to tackle exciting challenges!
 				</p>
 			
 				<p class="additionalText">
-					<strong>🤖 La FIRST LEGO League, c'est quoi ?</strong><br>
-					La <strong>FLL</strong> est une compétition mondiale qui encourage les jeunes à explorer les <strong>sciences, la technologie, l'ingénierie et les mathématiques (STEM)</strong> à travers des défis basés sur des missions robotiques et un projet d'innovation. Chaque année, un nouveau thème nous pousse à trouver des solutions créatives à des problèmes réels.
+					<strong>🤖 What is the FIRST LEGO League?</strong><br>
+					The <strong>FLL</strong> is a global competition that encourages young people to explore <strong>science, technology, engineering, and mathematics (STEM)</strong> through challenges based on robotic missions and an innovation project. Each year, a new theme pushes us to find creative solutions to real-world problems.
 				</p>
 			
 				<p class="additionalText">
-					<strong>💪 Nos défis</strong><br>
-					🔹 <strong>Concevoir et programmer</strong> un robot LEGO pour accomplir des missions sur un tapis de jeu.<br>
-					🔹 <strong>Développer un projet d'innovation</strong> en lien avec le thème de l'année.<br>
-					🔹 <strong>Travailler en équipe</strong> et respecter les valeurs fondamentales de la FLL : <strong>découverte, innovation, inclusion et fun</strong> !
+					<strong>🏆 Our Challenges</strong><br>
+					🔹 <strong>Design and program</strong> a LEGO robot to complete missions on a game mat.<br>
+					🔹 <strong>Develop an innovation project</strong> related to the year's theme.<br>
+					🔹 <strong>Work as a team</strong> and uphold the FLL's core values: <strong>discovery, innovation, inclusion, and fun</strong>!
 				</p>
 			
 				<p class="additionalText">
-					<strong>👥 Notre équipe</strong><br>
-					Nous sommes un groupe d'élèves aux compétences variées :<br>
-					🔹 <strong>Guillaume, Luca, Jules, Janna et Soan</strong><br>
-					🔹 Chez <strong>DD Corp</strong>, tout le monde travaille sur tout ! Chacun contribue à la <strong>conception, la programmation, la stratégie et la présentation</strong>. Nous apprenons ensemble, partageons nos idées et nous améliorons à chaque étape du projet.
-				</p>
-                
-                <p class="additionalText">
-                    <strong>🏆 Nos trophées</strong><br>
-                    🔹 Nous sommes <strong>Champion regional</strong> au lycée Gustave Eiffel<br>
-                    🔹 Nous avons aussi été <strong>3ème en esprit d'équipe et 3ème en robot design aux nationals</strong> ce qui nous a permis de nous qualifier au internationale<br>
-                </p>
-			
-				<p class="additionalText">
-					<strong>📅 Nos dates clés :</strong><br>
-					🛠 <strong>Préparation & entraînements :</strong> Sur notre temps libre: les midis et pendant nos heures de trous<br>
-                    🎉 <strong>Finale Internationale</strong> en Corée du Sud <strong>Du 3 au 5 juillet 2026</strong><br>
+					<strong>👥 Our Team</strong><br>
+					We are a group of students with varied skills:<br>
+					🔹 <strong>Guillaume, Lucas, Jules, Janna, and Soan</strong><br>
+					🔹 At <strong>DD Corp</strong>, everyone works on everything! Each member contributes to <strong>design, programming, strategy, and presentation</strong>. We learn together, share our ideas, and improve at every stage of the project.
 				</p>
 			
 				<p class="additionalText">
-					<strong>📸 Suis notre aventure sur <a href="https://www.instagram.com/dd_corp_lego_team/">Instagram</a></strong> pour découvrir nos projets et nos compétitions !
+					<strong>📅 Our Key Dates:</strong><br>
+					🛠 <strong>Preparation & training:</strong> March 13 and lunch breaks<br>
+					🎉 <strong>FLL Regional Competition – March 14 in Armentières:</strong> Join us to present our robot and project to other teams!<br>
+					🏆 <strong>National Final (if qualified!):</strong> April 4 in Mulhouse
 				</p>
-
-                <p class="additionalText">
-                <strong>Si tu veux nous aider à partir en Corée du sud, n'hésite pas à faire un don à </strong><a href="https://www.helloasso.com/associations/asso-fl/formulaires/1">Notre cagnotte</a>
-                </p>
+			
+				<p class="additionalText">
+					<strong>📸 Follow our adventure on <a href="https://www.instagram.com/dd_corp_lego_team/">Instagram</a></strong> to discover our projects and competitions!
+				</p>
 			</article>			
 			<article class="about">
 				<p class="aboutText">
 					<img src="images/team.jpg" alt="Image" class="aboutImage">	
 					<strong>--Vestige--</strong><br>
-                    <strong>Une boîte intelligente pour analyser les sédiments.</strong> Notre projet s'inscrit dans le cadre de la compétition <strong>FIRST LEGO LEAGUE</strong>. Cette année, le défi proposé aux équipes était <strong>imaginer une solution capable <span class="adminLink">d'aider</span> les archéologues dans leur travail.</strong>
+					<strong>A smart box for analyzing sediments.</strong> Our project is part of the <strong>FIRST LEGO LEAGUE</strong> competition. This year, the challenge given to teams was to <strong>imagine a solution capable of helping archaeologists in their work.</strong>
 				</p>
 				
 				<p class="additionalText">
-					<strong>L'origine du projet</strong><br>
-					Nous ne sommes donc pas partis de l’archéologie par hasard : c’est le thème de la compétition qui nous a poussés à nous intéresser à ce domaine. Pour mieux comprendre les besoins réels du terrain, nous avons décidé d’échanger directement avec des professionnels.
+					<strong>The Origin of the Project</strong><br>
+					So we didn't start with archaeology by chance: it was the competition's theme that led us to take an interest in this field. To better understand the real needs in the field, we decided to talk directly with professionals.
 				</p>
 
 				<p class="additionalText">
-					Nous avons ainsi pu discuter avec des archéologues comme Daniel Istria, un archéologue-chercheur au CNRS, et Fawzi Doumaz, un archéologue international. Grâce à plusieurs échanges et visioconférences avec eux, nous avons découvert à quel point les sédiments sont une source d’informations essentielle pour comprendre un site archéologique.
+					This allowed us to talk with archaeologists such as Fawzi Doumaz and Daniel Istria. Through several exchanges and video calls with them, we discovered how much sediments are an essential source of information for understanding an archaeological site.
 				</p>
-
-				<p class="additionalText logos">
-					<img src="images/CNRSLogo.png" alt="Image" class="aboutImage">
-					<img src="images/logoUMR.png" alt="Image" class="aboutImage">
+				
+				<p class="additionalText">
+					<strong>🌍 Monitoring Marine Ecosystems</strong><br>
+					Thanks to a network of <strong>advanced environmental <span class="adminLink">sensors</span></strong>, hydra'che continuously collects data on:
 				</p>
 
 				<p class="additionalText">  
-					Cependant, analyser ces sédiments demande souvent du temps, de l’expérience et parfois l’envoi d’échantillons en laboratoire. Nous avons donc cherché une idée qui pourrait faciliter et accélérer cette étape importante du travail des archéologues.  
+					However, analyzing these sediments often requires time, experience, and sometimes sending samples to a laboratory. So we looked for an idea that could facilitate and speed up this important step in archaeologists' work.  
 				</p>  
 				
 				<p class="additionalText">
-					<strong>Notre solution : une boîte d’analyse automatisée</strong><br>  
-					Nous avons conçu l’idée d’une boîte capable d’analyser automatiquement un échantillon de sédiment. 
+					<strong>Our Solution: An Automated Analysis Box</strong><br>  
+					We came up with the idea of a box capable of automatically analyzing a sediment sample. 
 				</p>
 				
 				<p class="additionalText">
-					Le principe est simple : l’archéologue place un échantillon de sédiment dans la boîte, et celui-ci va ensuite passer à travers plusieurs étapes d’analyse, un peu comme dans une chaîne d’examen scientifique.
+					The principle is simple: the archaeologist places a sediment sample in the box, which then goes through several analysis steps, somewhat like a scientific examination chain.
 				</p>
 
 				<p class="additionalText">
-					À l’intérieur de la boîte, un petit tapis roulant fait avancer le sédiment à travers différents capteurs. À chaque étape, un nouveau capteur va analyser une caractéristique du sédiment.  
+					Inside the box, a small conveyor belt moves the sediment through different sensors. At each step, a new sensor analyzes a characteristic of the sediment.  
 				</p>
 
 				<p class="additionalText">
-					Ainsi, en quelques minutes, plusieurs informations importantes peuvent être récupérées automatiquement. Cette solution fonctionnerait comme un mini laboratoire portable directement sur le terrain.  
+					Thus, within a few minutes, several important pieces of information can be automatically retrieved. This solution would work like a mini portable laboratory directly in the field.  
 				</p>
 
 				<p class="additionalText">
-					<strong>Les différentes étapes d’analyse</strong><br>  
-					Lorsque le sédiment est placé dans la boîte, il avance progressivement sur le tapis roulant et passe par plusieurs stations d’analyse.
+					<strong>The Different Analysis Steps</strong><br>  
+					When the sediment is placed in the box, it gradually moves along the conveyor belt and passes through several analysis stations.
 				</p>
 				
 				<ul class="additionalText">
-					<li><strong>Analyse de la compacité</strong> – Mesure la résistance du sol à l’aide d’un pénétromètre pour comprendre la structure des couches.</li>  
-					<li><strong>Analyse de la couleur</strong> – Un capteur de colorimétrie permet de détecter la présence de matières organiques ou d’anciens dépôts.</li>  
-					<li><strong>Analyse du pH</strong> – Indique si le sol est acide, neutre ou basique, ce qui influence la conservation des objets archéologiques.</li>  
-					<li><strong>Enregistrement de la position</strong> – Les données peuvent être associées à une position GPS pour relier les informations à la carte du site.</li>	
+					<li><strong>Compactness Analysis</strong> – Measures soil resistance using a penetrometer to understand the layer structure.</li>  
+					<li><strong>Color Analysis</strong> – A colorimetry sensor detects the presence of organic matter or old deposits.</li>  
+					<li><strong>pH Analysis</strong> – Indicates whether the soil is acidic, neutral, or basic, which affects the preservation of archaeological objects.</li>  
+					<li><strong>Position Recording</strong> – Data can be linked to a GPS position to connect information to the site map.</li>	
 				</ul>
 				
 				<p class="additionalText">
-					<strong>Pourquoi ce système peut être utile</strong><br>  
-					Notre boîte d’analyse permettrait d’obtenir rapidement plusieurs informations scientifiques sur un sédiment, directement sur le terrain.  
+					<strong>Why This System Can Be Useful</strong><br>  
+					Our analysis box would allow quickly obtaining several scientific pieces of information about a sediment, directly in the field.  
 				</p>
 				
 				<ul class="additionalText">
-					<li>Analyser un sédiment en quelques minutes</li>  
-					<li>Obtenir plusieurs données automatiquement</li>  
-					<li>Faciliter le travail des archéologues</li>  
-					<li>Mieux comprendre les différentes couches du sol</li>  
-					<li>Réduire le temps d’attente pour certaines analyses</li> 
+					<li>Analyze a sediment in just a few minutes</li>  
+					<li>Automatically obtain multiple data points</li>  
+					<li>Facilitate the work of archaeologists</li>  
+					<li>Better understand the different soil layers</li>  
+					<li>Reduce waiting time for certain analyses</li> 
 				</ul>
 				
 				<p class="additionalText">
-					En résumé, notre objectif est de créer un outil qui permettrait de rendre l’analyse des sédiments plus rapide, plus simple et plus efficace.  
+					In summary, our goal is to create a tool that would make sediment analysis faster, simpler, and more efficient.  
 				</p>
 			</article>	  
 			<article class="help">
 				<form class="helpForm">
 					<label>
-						Sujet
+						Subject
 						<input type="text" name="subject" />
 					</label>
 					<label>
-						Votre message
+						Your message
 						<textarea name="body" rows="5"></textarea>
 					</label>
-					<button type="submit">Envoyer</button>
+					<button type="submit">Send</button>
 				</form>				
+			</article>
+			<article class="install">
+				<!-- <h2>Game Download</h2>
+				<table border="1">
+					<thead>
+						<tr>
+							<th>Version Name</th>
+							<th>Download Link</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Version 4.0</td>
+							<td><a href="https://drive.google.com/file/d/1UfzyCbYb9ZhALzLib440xQ9Ude7oKZ0z/view?usp=sharing">Download</a></td>
+						</tr>
+						<tr>
+							<td>Version 3.0</td>
+							<td><a href="https://drive.google.com/file/d/1Re9Zddp20uxaBnuKgup68OxwdKZRFwQt/view?usp=drive_link">Download</a></td>
+						</tr>
+						<tr>
+							<td>Version 2.0</td>
+							<td><a href="https://drive.google.com/file/d/1Z2llSDT6KLVVu7q_aAyb35YTcv1wjVXN/view?usp=drive_link">Download</a></td>
+						</tr>
+						<tr>
+							<td>Version 1.0</td>
+							<td><a href="https://drive.google.com/file/d/1N2FYU8tLc1uw3CfJbH9pWeeOBMki4CGD/view?usp=drive_link">Download</a></td>
+						</tr>
+					</tbody>
+				</table> -->
+				<!-- <details>
+					<summary>Privacy Policy (GDPR)</summary>
+					<p><strong>1. Introduction</strong></p>
+					<p>This privacy policy explains how <em>[Hydra'che]</em> handles user data in accordance with the General Data Protection Regulation (GDPR).</p>
+				
+					<p><strong>2. Data Collected and Purposes</strong></p>
+					<p>The Game <strong>does not collect identifiable personal data</strong>. However, it stores certain information locally and communicates with an external database to display statistics.</p>
+					<ul>
+						<li><strong>Locally stored data:</strong>
+							<ul>
+								<li>Player progress</li>
+								<li>Game settings</li>
+							</ul>
+						</li>
+						<li><strong>Connection to an external database:</strong>
+							<ul>
+								<li>Display of statistics or general data</li>
+								<li>No personal data is sent</li>
+							</ul>
+						</li>
+					</ul>
+				
+					<p><strong>3. Legal Basis for Processing</strong></p>
+					<p>The processing of local data is based on the player's <strong>legitimate interest</strong> in saving their progress. Since no personal data is sent to an external database, no other legal basis is necessary.</p>
+				
+					<p><strong>4. Data Retention</strong></p>
+					<p>Data stored locally remains on the player's device as long as they do not uninstall the Game. No data is retained on external servers.</p>
+				
+					<p><strong>5. User Rights</strong></p>
+					<p>In accordance with the GDPR, users have the following rights:</p>
+					<ul>
+						<li><strong>Right of access:</strong> Check the data stored on their device.</li>
+						<li><strong>Right to erasure:</strong> Manually delete the game files or uninstall the application.</li>
+						<li><strong>Right to data portability:</strong> Copy and transfer local saves.</li>
+					</ul>
+				
+					<p><strong>6. Data Security</strong></p>
+					<p>All data remains stored on the user's device and is not accessible to third parties.</p>
+
+				</details> -->
+				
+			
+				<h2>Mobile Application Download (Android)</h2>
+				<table border="1">
+					<thead>
+						<tr>
+							<th>Version Name</th>
+							<th>Download Link</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Version 3.0</td>
+							<td><a href="https://drive.google.com/file/d/1pJTJ2FCeE71dHngUcRmfvai_lyQ3sqfc/view?usp=sharing">Download</a></td>
+						</tr>
+						<tr>
+							<td>Version 2.0</td>
+							<td><a href="https://drive.google.com/file/d/1ofnmL3ixfl8oUR5pQfSA1A4EZpxvnIoN/view?usp=drive_link">Download</a></td>
+						</tr>
+						<tr>
+							<td>Version 1.0</td>
+							<td><a href="https://drive.google.com/file/d/1MHKG20_DODdmDMq4n14pA1NH9PsW6DQJ/view?usp=drive_link">Download</a></td>
+						</tr>
+					</tbody>
+				</table>
+				<details>
+					<summary>Privacy Policy (GDPR)</summary>
+					<p><strong>1. Introduction</strong></p>
+					<p>This privacy policy explains how <em>[Hydra'che]</em> handles user data in accordance with the GDPR.</p>
+				
+					<p><strong>2. Data Collected and Purposes</strong></p>
+					<p>The Application <strong>does not collect any personal data</strong>. It only connects to an external database to display information.</p>
+				
+					<p><strong>3. Data Retention</strong></p>
+					<p>No user data is stored on the Application or on an external server.</p>
+				
+					<p><strong>4. User Rights</strong></p>
+					<p>Since no personal data is collected, there are no options for modifying or deleting data.</p>
+				
+					<p><strong>5. Data Security</strong></p>
+					<p>Connections with the database are secured using cryptographic protocols.</p>
+				</details>
+				
 			</article>
 			<article class="db">
 				<form class="dbform">
-					<label for="biomasse">Biomasse :</label>
+					<label for="biomasse">Biomass:</label>
 					<input type="text" id="biomasse" name="biomasse" value="0.3" required>
-					<button type="submit">Envoyer</button>
+					<button type="submit">Send</button>
 				</form>
 				
 				<form class="dbform">
-					<label for="co2">CO2 :</label>
+					<label for="co2">CO2:</label>
 					<input type="text" id="co2" name="co2" value="302" required>
-					<button type="submit">Envoyer</button>
+					<button type="submit">Send</button>
 				</form>
 				
 				<form class="dbform">
-					<label for="courants">Courants :</label>
+					<label for="courants">Currents:</label>
 					<input type="text" id="courants" name="courants" value="1.2" required>
-					<button type="submit">Envoyer</button>
+					<button type="submit">Send</button>
 				</form>
 				
 				<form class="dbform">
-					<label for="fluorescence">Fluorescence :</label>
+					<label for="fluorescence">Fluorescence:</label>
 					<input type="text" id="fluorescence" name="fluorescence" value="0.7" required>
-					<button type="submit">Envoyer</button>
+					<button type="submit">Send</button>
 				</form>
 				
 				<form class="dbform">
-					<label for="humidite">Humidité :</label>
+					<label for="humidite">Humidity:</label>
 					<input type="text" id="humidite" name="humidite" value="100" required>
-					<button type="submit">Envoyer</button>
+					<button type="submit">Send</button>
 				</form>
 				
 				<form class="dbform">
-					<label for="lat">Latitude :</label>
+					<label for="lat">Latitude:</label>
 					<input type="text" id="lat" name="lat" value="50.683331" required>
-					<button type="submit">Envoyer</button>
+					<button type="submit">Send</button>
 				</form>
 				
 				<form class="dbform">
-					<label for="long">Longitude :</label>
+					<label for="long">Longitude:</label>
 					<input type="text" id="long" name="long" value="2.88333" required>
-					<button type="submit">Envoyer</button>
+					<button type="submit">Send</button>
 				</form>
 				
 				<form class="dbform">
-					<label for="lumiere">Lumière :</label>
+					<label for="lumiere">Light:</label>
 					<input type="text" id="lumiere" name="lumiere" value="600" required>
-					<button type="submit">Envoyer</button>
+					<button type="submit">Send</button>
 				</form>
 				
 				<form class="dbform">
-					<label for="mouvement">Mouvement :</label>
+					<label for="mouvement">Movement:</label>
 					<input type="text" id="mouvement" name="mouvement" value="1" required>
-					<button type="submit">Envoyer</button>
+					<button type="submit">Send</button>
 				</form>
 				
 				<form class="dbform">
-					<label for="o2">Oxygène (O2) :</label>
+					<label for="o2">Oxygen (O2):</label>
 					<input type="text" id="o2" name="o2" value="5" required>
-					<button type="submit">Envoyer</button>
+					<button type="submit">Send</button>
 				</form>
 				
 				<form class="dbform">
-					<label for="ph">pH :</label>
+					<label for="ph">pH:</label>
 					<input type="text" id="ph" name="ph" value="7.8" required>
-					<button type="submit">Envoyer</button>
+					<button type="submit">Send</button>
 				</form>
 				
 				<form class="dbform">
-					<label for="pression">Pression :</label>
+					<label for="pression">Pressure:</label>
 					<input type="text" id="pression" name="pression" value="2" required>
-					<button type="submit">Envoyer</button>
+					<button type="submit">Send</button>
 				</form>
 				
 				<form class="dbform">
-					<label for="salinite">Salinité :</label>
+					<label for="salinite">Salinity:</label>
 					<input type="text" id="salinite" name="salinite" value="34" required>
-					<button type="submit">Envoyer</button>
+					<button type="submit">Send</button>
 				</form>
 				
 				<form class="dbform">
-					<label for="temperature">Température :</label>
+					<label for="temperature">Temperature:</label>
 					<input type="text" id="temperature" name="temperature" value="3.6" required>
-					<button type="submit">Envoyer</button>
+					<button type="submit">Send</button>
 				</form>
 				
 				<form class="dbform">
-					<label for="turbidite">Turbidité :</label>
+					<label for="turbidite">Turbidity:</label>
 					<input type="text" id="turbidite" name="turbidite" value="6" required>
-					<button type="submit">Envoyer</button>
+					<button type="submit">Send</button>
 				</form>
 				
 				<form class="dbform">
-					<label for="view">View :</label>
+					<label for="view">View:</label>
 					<input type="text" id="view" name="view" value="0" required>
-					<button type="submit">Envoyer</button>
+					<button type="submit">Send</button>
 				</form>
 			</article>		
 		</div>
 	</section>
 	<footer>
 		<div>
-			Une (incroyable) création originale de la <a href="https://www.instagram.com/dd_corp_lego_team/">DDCorp</a> de <a href="https://lycee-gustave-eiffel.fr/">Gustave Eiffel</a>
-			<img src="images/Logo-Lycee-Gustave-Eiffel.jpg" width="30" height="30" alt="Logo Lycée Gustave Eiffel" />
+			An (incredible) original creation by the <a href="https://www.instagram.com/dd_corp_lego_team/">DDCorp</a> of <a href="https://lycee-gustave-eiffel.fr/">Gustave Eiffel</a>
+			<img src="images/Logo-Lycee-Gustave-Eiffel.jpg" width="30" height="30" alt="Gustave Eiffel High School Logo" />
 		</div>
-		<div>Données et images des jeux fournies par la DDCorp</div>
+		<div>Game data and images provided by DDCorp</div>
 		<div class="viewClass"></div>
 	</footer>
 </body>
