@@ -185,13 +185,11 @@ function SetData(dataName, data) {
     });
 }
 
-document.querySelector(".viewClass").addEventListener("click", resetView);
 function resetView(){
     let pwd = 'DDforEVER';
     let person = prompt("Please enter your password:", "***");
     if (person == null || person == "") {
-      text = "User cancelled the prompt.";
-      alert(text);
+      alert("User cancelled the prompt.");
     } else {
       if (person == pwd) {
         firebase.database().ref("/stats").update({
@@ -199,25 +197,21 @@ function resetView(){
         });
         document.querySelector(".viewClass").innerHTML =  `Number of views: 0`;
       } else {
-        text = "Wrong password!";
-        alert(text);
+        alert("Wrong password!");
       }
     }
+}
 
-  }
-document.querySelector(".adminLink").addEventListener("click", adminShow);
 function adminShow() {
     let pwd = 'admin123ADMIN';
     let person = prompt("Please enter your password:", "***");
     if (person == null || person == "") {
-      text = "User cancelled the prompt.";
-      alert(text);
+      alert("User cancelled the prompt.");
     } else {
       if (person == pwd) {
         Router.navigate('/admin');
       } else {
-        text = "Wrong password!";
-        alert(text);
+        alert("Wrong password!");
       }
     }
 }
@@ -322,7 +316,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Route definitions
     Router.routes = [
         { path: '/gameList', view: gameListView, title: 'App/Mockup' },
-        { path: '/', view: gameListView, title: 'App/Mockup' },
+        { path: '/', view: aboutView, title: 'About' },
         { path: '/install', view: installView, title: 'Installation' },
         { path: '/about', view: aboutView, title: 'About' },
         { path: '/team', view: teamView, title: 'Team' },
@@ -344,6 +338,18 @@ document.addEventListener("DOMContentLoaded", function () {
             Router.navigate(event.currentTarget.getAttribute('href'));
         });
     });
+
+    // Moved here (was outside DOMContentLoaded before, and crashed because
+    // .adminLink doesn't exist in the current HTML — this null-check fixes that)
+    const viewClassEl = document.querySelector(".viewClass");
+    if (viewClassEl) {
+        viewClassEl.addEventListener("click", resetView);
+    }
+
+    const adminLinkEl = document.querySelector(".adminLink");
+    if (adminLinkEl) {
+        adminLinkEl.addEventListener("click", adminShow);
+    }
 
     UpdateView();
 
